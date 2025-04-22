@@ -5,7 +5,7 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-        // Simulação do movimento da TORRE (5 casas para a direita)
+    // Simulação do movimento da TORRE (5 casas para a direita)
     // Utilizando o laço FOR
     printf("Movimento da TORRE(5 casas para a direita):\n");
     for (int i = 1; i <= 5; i++)
@@ -13,7 +13,7 @@ int main() {
         printf("Direita\n");
     }
 
-    printf("\n");//Linha em branco para separar movimentos
+    printf("\n"); // Linha em branco para separar movimentos
 
     // Simulação do movimento da BISPO (5 casas na Diagonal e à direita)
     // Utilizando o laço WHILE
@@ -25,7 +25,7 @@ int main() {
         j++;
     }
 
-    printf("\n");//Linha em branco para separar movimentos
+    printf("\n"); // Linha em branco para separar movimentos
 
     // Simulação do movimento da RAINHA (8 casas pra a esquerda)
     // Utilizando o laço DO-WHILE
@@ -36,6 +36,28 @@ int main() {
         printf("Esquerda\n");
         k++;
     } while (k <= 8);
+
+    printf("\n"); // Linha em branco para separar movimentos
+
+    // Simulação do movimento do CAVALO (2 casas para baixo, 1 casa para esquerda)
+    // Utilizando Loops aninhados: FOR para "baixo", "WHILE" para "esquerda"
+    printf("Movimento do CAVALO (2 casas para baixo, 1 casa para esquerda):\n");
+
+    for (int passo = 1; passo <= 2; passo++)
+    {
+        printf("Baixo\n");
+
+        // Quando chegarmos ao último passo para baixo, vamos para a esquerda
+        if (passo == 2)
+        {
+            int esquerda = 1;
+            while (esquerda <= 1)
+            {
+                printf("Esquerda\n");
+                esquerda++;
+            }
+        }
+    }
 
     return 0;
 }
